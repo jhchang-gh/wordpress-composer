@@ -12,6 +12,7 @@
  */
 
 // Test for git-flow
+define('GITFLOW', true);
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
