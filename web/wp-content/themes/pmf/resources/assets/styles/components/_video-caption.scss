@@ -1,0 +1,42 @@
+.video-caption {
+  margin-top: unset;
+  &__cover-image {
+    height: 456px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media(sm) {
+      height: 165px;
+    }
+    &:before {
+      content:'';
+      display: block;
+      background-image: url("../images/play-button.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 64px;
+      height: 64px;
+      background-size: contain;
+      transition: all 0.15s linear;
+
+    }
+    &:hover {
+      &::before {
+        background-image: url("../images/play-button-hover.svg");
+      }
+    }
+  }
+  .intro-text__inner {
+    border-bottom: none;
+  }
+  .intro-text__inner__row__right {
+    @include media(md) {
+      padding: 0;
+    }
+  }
+  @include media(sm) {
+    margin-bottom: 20px;
+  }
+}
+

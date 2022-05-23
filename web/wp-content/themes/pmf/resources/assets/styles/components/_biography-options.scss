@@ -1,0 +1,216 @@
+.biography-options{
+
+    &__inner{
+        background-color: #fff;
+        padding: 0 0 95px 0;
+        position: relative;
+        z-index: 2;
+        border-bottom: 1px solid #D4E4E9;
+      @include media(sm){
+        padding-bottom: 48px;
+      }
+    }
+
+    &__row{
+        display: flex;
+
+        @include media(md){
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 16px;
+        background: #FFFFFF;
+        border: 1px solid #D4E4E9;
+        box-sizing: border-box;
+        border-radius: 4px;
+        flex-shrink: 0;
+        transition: all 0.15s linear;
+
+        &__caption{
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            color: #9FADAC;
+            margin-bottom: 48px;
+        }
+
+        &__title{
+            font-family: Bookmania;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 34px;
+            color: #233746;
+        }
+
+        &__icon{
+            width: 48px;
+            height: 48px;
+            margin-bottom: 8px;
+            border-radius: 50%;
+            border: 1px solid #9FADAC;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.15s linear;
+            &--ico-hear{
+                background-image: url('../images/ico-hear.svg');
+            }
+
+            &--ico-marker{
+                background-image: url('../images/ico-marker.svg');
+            }
+
+            &--ico-quote{
+                background-image: url('../images/quote.svg');
+            }
+
+            &--ico-view{
+              background-image: url('../images/play.svg');
+              background-position-x: 17px;
+            }
+
+        }
+
+        /*a {
+            color: $color-3;
+            font-size: 14px;
+            &:hover{
+              text-decoration: underline;
+            }
+
+        }*/
+        &__link {
+            color: $color-3;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              height: 1px;
+              background-color: $color-3;
+              //transform: translateX(-100%);
+              width: 0;
+              transition: all 0.15s linear;
+            }
+
+          }
+       /* &:first-of-type{
+            width:282px;
+
+        }*/
+
+        &:nth-of-type(2){
+            margin-left: 15px;
+            margin-right: 15px;
+            @include media(md){
+                margin: unset;
+                margin-bottom:24px;
+            }
+        }
+        &:first-of-type{
+            @include media(md){
+                margin-bottom: 24px;
+            }
+        }
+        /*
+        &:last-of-type{
+            width: auto;
+            flex-shrink: 1;
+        }*/
+
+        &.width {
+            &-default {
+              width: 27.46%;
+              @include media(md){
+                width: 49%;
+              }
+              @include media(xs){
+                width: 100%;
+              }
+
+            }
+
+            &-big {
+              width: calc(45% - 30px);
+              @include media(md){
+                width: 100%;
+              }
+            }
+        }
+
+        &:hover{
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            /*padding: 40px 16px;*/
+            transform: scale(1.05);
+            .biography-options__item__link {
+                color: #9FADAC;
+
+                &::before{
+                  width: 24px;
+                  margin: 0 4px 0 4px;
+                }
+            }
+
+            .biography-options__item__icon{
+
+                background-color: #233746;
+
+
+                &--ico-hear{
+                    background-image: url('../images/ico-hear-hover.svg');
+                }
+
+                &--ico-marker{
+                    background-image: url('../images/ico-marker-hover.svg');
+                }
+
+                &--ico-quote{
+                    background-image: url('../images/quote-hover.svg');
+                }
+                &--ico-view{
+                  background-image: url('../images/play-hover.svg');
+                }
+            }
+
+
+        }
+        &:active{
+
+            .biography-options__item__icon{
+
+                background-color: #091925;
+
+                &--ico-hear{
+                    background-image: url('../images/ico-hear-hover.svg');
+                }
+
+                &--ico-marker{
+                    background-image: url('../images/ico-marker-hover.svg');
+                }
+
+                &--ico-quote{
+                    background-image: url('../images/quote-hover.svg');
+                }
+                &--ico-view{
+                  background-image: url('../images/play-hover.svg');
+                }
+            }
+
+
+        }
+    }
+}

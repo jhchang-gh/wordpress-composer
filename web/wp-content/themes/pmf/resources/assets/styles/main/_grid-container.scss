@@ -1,0 +1,135 @@
+
+.grid-container {
+  &.container {
+    width: 1200px;
+    padding-left: unset;
+    padding-right: unset;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 1280px) {
+      max-width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include media(md) {
+      padding-left: 44px;
+      padding-right: 44px;
+    }
+
+  }
+  &.container-fluid {
+    width: 100%;
+    padding-left: calc((100% - 1200px) / 2 + 100px);
+    padding-right: unset;
+    margin-right: unset;
+    margin-left: unset;
+    max-width: 100%;
+    overflow: hidden;
+    @media (max-width: 1200px) {
+      padding-left: 100px;
+    }
+    @include media(md) {
+      padding-left: 44px;
+    }
+    @include media(sm) {
+      padding-left: 0;
+    }
+    & .container {
+      margin-left: unset;
+      margin-right: unset;
+    }
+    .container {
+      padding-left: 0;
+      @include media(sm) {
+        padding-left: 44px;
+      }
+    }
+
+  }
+  &__col-*{
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+  &__col-1 {
+    width: 8.3333%;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-2 {
+    width: 8.3333% * 2;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-3 {
+    width: 8.3333% * 3;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-4 {
+    width: 8.3333% * 4;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-5 {
+    width: 8.3333% * 5;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-6 {
+    width: 8.3333% * 6;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-7 {
+    width: 8.3333% * 7;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-8 {
+    width: 8.3333% * 8;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-9 {
+    width: 8.3333% * 9;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-10 {
+    width: 8.3333% * 10;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-11 {
+    width: 8.3333% * 11;
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+  &__col-12 {
+    width: 8.3333% * 12;
+  }
+  &__offset-1 {
+    padding-left: 8.3333%!important;
+  }
+
+
+}
+.global-offset-1 {
+  padding-left: 100px!important;
+  @include media(md) {
+    padding-left: 44px!important;
+  }
+
+}

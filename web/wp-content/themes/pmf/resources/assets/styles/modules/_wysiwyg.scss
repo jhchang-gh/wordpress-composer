@@ -1,0 +1,17 @@
+img {
+  $offset: 20px;
+
+  &.alignleft {
+    @include media_min(sm) {
+      float: left;
+      margin: 0 $offset $offset 0;
+    }
+  }
+
+  &.alignright {
+    @include media_min(sm) {
+      float: left;
+      margin: 0 0 $offset $offset;
+    }
+  }
+}

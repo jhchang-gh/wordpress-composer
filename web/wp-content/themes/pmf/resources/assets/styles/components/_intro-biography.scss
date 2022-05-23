@@ -1,0 +1,158 @@
+.intro-biography {
+    position: relative;
+    background-color: #EFF7F6;
+    padding-top: 80px;
+    .is-mobile &{
+      padding-top: 0;
+    }
+
+    .container {
+        display: flex;
+        position: relative;
+        @include media(md){
+          flex-direction: column-reverse;
+        }
+    }
+
+    &__breadcrumbs{
+      z-index: 1;
+      position: absolute;
+      top: 24px;
+      &__link{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #233746;
+        transition: all 0.15s linear;
+
+        &:before{
+          content:"";
+          background-image: url('../images/arrow-left.svg');
+          display:inline-block;
+          width: 6px;
+          height: 10px;
+          margin-right: 10px;
+          transition: all 0.15s linear;
+        }
+
+        &:hover{
+          color:#9FADAC;
+          &:before{
+            background-image: url('../images/arrow-left-hover.svg');
+          }
+
+        }
+
+        &:active{
+          color:#92981B;
+          &:before{
+            background-image: url('../images/arrow-left-active.svg');
+          }
+
+        }
+
+      }
+    }
+
+    &__img {
+        position: relative;
+        flex-basis: 280px;
+
+
+        @include media(md){
+          flex-basis: auto;
+          max-width: 250px;
+          margin-bottom: -140px;
+        }
+      @media (max-width: 500px) {
+        max-width: 100%;
+      }
+
+        img {
+          position: absolute;
+          /*bottom: -104px;*/
+          top: 90px;
+          max-width: unset;
+          border-radius: 4px;
+          z-index: 3;
+          width: 100%;
+          min-width: 280px;
+          @include media(md){
+            top:unset;
+            bottom: unset;
+            position: relative;
+          }
+          @media (max-width: 450px) {
+            min-width: unset;
+          }
+        }
+    }
+
+    &__text {
+        padding: 88px 0 65px 126px;
+
+        @include media(md){
+          padding: 80px 0 50px 0;
+        }
+
+        &__title {
+          font-family: Bookmania;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 62px;
+          line-height: 72px;
+
+          @include media(md){
+            font-size: 48px;
+            line-height: 50px;
+          }
+
+        }
+
+        &__text {
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 30px;
+          color: #808080;
+          max-width: 690px;
+
+          @include media(md){
+            font-size: 16px;
+            line-height: 22px;
+          }
+
+          p {
+            margin: 0;
+            padding: 0;
+            color: #525252;
+          }
+
+        }
+        &__subtitle {
+          color: #9FADAC;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 18px;
+          margin: 0 0 24px 0;
+          display: block;
+
+          &::before {
+              content: '';
+              display: block;
+              background-color: $color-3;
+              width: 64px;
+              height: 2px;
+              margin: 0 0 55px 0;
+
+            @include media(md){
+              margin-bottom:24px;
+            }
+          }
+
+        }
+
+      }
+
+
+}

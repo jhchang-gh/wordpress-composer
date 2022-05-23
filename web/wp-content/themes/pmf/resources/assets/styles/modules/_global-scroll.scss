@@ -1,0 +1,56 @@
+body:not(.is-mobile) {
+  overflow: hidden;
+  &:hover {
+    #scrollbar {
+      background: rgba(100, 97, 97, 0.5);
+    }
+  }
+  #scrollbar {
+    width: 12px;
+    min-height: 12px;
+    background: rgba(0,0,0,.1);
+    position: absolute;
+    right: 1px;
+    left: calc(100% - 12px);
+    border-radius: 200px;
+    z-index: 100;
+    cursor: default;
+
+  }
+
+  #scrollbar:hover {
+    background: rgba(100, 97, 97, 1);
+  }
+
+  #wrapper {
+    position: absolute;
+    padding-right: 0;
+    left: 0;
+    right: -30px;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    .timeline &{
+      right: auto;
+    }
+
+
+  }
+  &.menu-active {
+    #scrollbar {
+      opacity: 0;
+    }
+  }
+  &.interactive-map  {
+    #scrollbar {
+      display: none;
+    }
+    #wrapper {
+      right:0;
+    }
+  }
+
+}
+
+
+

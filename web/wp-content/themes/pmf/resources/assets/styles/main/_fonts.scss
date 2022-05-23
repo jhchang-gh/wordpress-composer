@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Aktiv Grotesk Corp';
+  src: url('../fonts/aktiv-grotesk/AktivGroteskCorp-Medium.eot');
+  src: local('AktivGroteskCorp-Medium'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Medium.woff2') format('woff2'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Medium.woff') format('woff'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk Corp';
+  src: url('../fonts/aktiv-grotesk/AktivGroteskCorp-Bold.eot');
+  src: local('AktivGroteskCorp-Bold'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Bold.woff2') format('woff2'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Bold.woff') format('woff'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk Corp';
+  src: url('../fonts/aktiv-grotesk/AktivGroteskCorp-Italic.eot');
+  src: local('AktivGroteskCorp-Italic'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Italic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Italic.woff2') format('woff2'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Italic.woff') format('woff'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk Corp';
+  src: url('../fonts/aktiv-grotesk/AktivGroteskCorp-LightItalic.eot');
+  src: local('AktivGroteskCorp-LightItalic'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-LightItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-LightItalic.woff2') format('woff2'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-LightItalic.woff') format('woff'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk Corp';
+  src: url('../fonts/aktiv-grotesk/AktivGroteskCorp-MediumItalic.eot');
+  src: local('AktivGroteskCorp-MediumItalic'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-MediumItalic.woff2') format('woff2'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-MediumItalic.woff') format('woff'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk Corp';
+  src: url('../fonts/aktiv-grotesk/AktivGroteskCorp-Light.eot');
+  src: local('AktivGroteskCorp-Light'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Light.woff2') format('woff2'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Light.woff') format('woff'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk Corp';
+  src: url('../fonts/aktiv-grotesk/AktivGroteskCorp-Regular.eot');
+  src: local('AktivGroteskCorp-Regular'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Regular.woff2') format('woff2'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Regular.woff') format('woff'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk Corp';
+  src: url('../fonts/aktiv-grotesk/AktivGroteskCorp-BoldItalic.eot');
+  src: local('AktivGroteskCorp-BoldItalic'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-BoldItalic.woff2') format('woff2'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-BoldItalic.woff') format('woff'),
+  url('../fonts/aktiv-grotesk/AktivGroteskCorp-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+
+
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-BlackItalic.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-Black.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-BoldItalic.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-SemiBold.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-Italic.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-Light.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-Regular.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-SemiBoldItalic.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-LightItalic.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('../fonts/bookmania/Bookmania-Bold.woff2') format('woff2'),
+  url('../fonts/bookmania/Bookmania-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+

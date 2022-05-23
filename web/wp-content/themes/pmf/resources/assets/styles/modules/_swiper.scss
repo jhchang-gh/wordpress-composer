@@ -1,0 +1,60 @@
+.swiper {
+
+  &-controls {
+    display: flex;
+    vertical-align: top;
+  }
+
+  &-button {
+
+    &-prev,
+    &-next {
+      $size: 48px;
+      width: $size;
+      height: $size;
+      border: 1px solid #9FADAC;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: static;
+      transition: all 0.15s linear;
+
+      &:hover {
+        background-color: #233746;
+        border-color: #233746;
+      }
+
+      &::after {
+        content: '';
+        display: none;
+      }
+
+    }
+
+    &-prev {
+      margin: 0px 8px 0 0;
+      background: url('../images/swiper_arrow_prev.svg') center center no-repeat;
+      &:hover {
+        background-image: url('../images/swiper_arrow_prev_white.svg');
+      }
+      &.disabled:hover {
+        background: url('../images/swiper_arrow_prev.svg') center center no-repeat;
+      }
+    }
+
+    &-next {
+      margin: 0;
+      background: url('../images/swiper_arrow_next.svg') center center no-repeat;
+      &:hover {
+        background-image: url('../images/swiper_arrow_next_white.svg');
+      }
+      &.disabled:hover {
+        background: url('../images/swiper_arrow_next.svg') center center no-repeat;
+      }
+    }
+
+  }
+
+
+}

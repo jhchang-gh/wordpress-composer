@@ -1,0 +1,229 @@
+.intro-text {
+  position: relative;
+  z-index: 2;
+  margin-top: -#{$section-margin-bottom + 110px};
+  margin-bottom: 48px;
+
+  @include media(md){
+    margin-top: 0;
+
+  }
+
+  &.normal {
+    margin-top: 0;
+
+    .intro-text__inner {
+      padding-top: 0;
+    }
+  }
+
+  .container {
+    padding-right: 0;
+    @include media(md){
+      padding-right: $padding-global;
+      padding-left: $padding-global;
+    }
+  }
+
+  &__inner {
+    background-color: #fff;
+    padding: 96px 0 48px 0;
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid #D4E4E9;
+    @include media(md){
+      padding: 0;
+    }
+
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      background-color: #fff;
+      left: -102px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__row {
+      $width-right: 300px;
+
+      display: flex;
+      @include media(md){
+        flex-direction: column;
+      }
+
+      &__left {
+
+        &:not(.full) {
+          width: calc(100% - #{$width-right});
+          padding: 0 48px 0 0;
+          @include media(md){
+            width: 100%;
+            padding: 0;
+            margin: 0 0 24px 0;
+          }
+        }
+
+        .title {
+          @include media(md){
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+
+      }
+
+      &__right {
+        width: $width-right;
+        border-top: 1px solid #d4e4e9;
+        padding: 0 120px 0 0;
+        @include media(lg){
+          padding-right: $padding-global;
+        }
+        @include media(md){
+          width: 100%;
+          padding-bottom: $padding-global;
+
+        }
+
+        .text {
+          padding: 25px 0 0 24px;
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: normal;
+          @include media(md){
+            max-width: none;
+          }
+
+          span {
+            color: #9fadac;
+            display: block;
+            margin: 0 0 16px 0;
+          }
+
+          p {
+            font-weight: normal;
+            color: #000;
+            display: block;
+            margin: 0 0 12px 0;
+            padding: 0;
+          }
+
+          a {
+            color: $color-3;
+            &::before {
+              content: "";
+              display: inline-block;
+              background-color: #b5be00;
+              height: 1px;
+              position: relative;
+              transform: translateY(-3px);
+              width: 0;
+              transition: width 0.15s linear;
+              will-change: width;
+              margin-right: 0;
+            }
+
+            &:hover {
+              &::before {
+                width: 24px;
+                margin-right: 4px;
+              }
+            }
+
+
+          }
+
+        }
+
+      }
+    }
+    .no-hero & {
+      padding-top: 0;
+    }
+
+  }
+  &.intro-text-v2{
+    &.no-hero {
+      margin-top:unset;
+    }
+    .intro-text__inner__row{
+      align-items: flex-start;
+    }
+    .intro-text__inner {
+      border-bottom: 0;
+    }
+    .simple_text{
+      margin-top:24px;
+      @include media(xs) {
+        margin-top: 0;
+      }
+      p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        color: #161616;
+        @include media(sm) {
+          font-size: 16px;
+        }
+        &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+      }
+    }
+    .intro-text__inner__row__right {
+      margin-top: 26px;
+    }
+  }
+
+  &.wysiwyg-editor {
+    margin-top: unset;
+    .simple_text{
+      margin-top:24px;
+      p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        color: #161616;
+        @include media(sm) {
+          font-size: 16px;
+        }
+        &:not(:last-child) {
+          margin-bottom: 18px;
+        }
+      }
+      h1,h2,h3,h4,h5 {
+        margin-bottom: 24px;
+
+      }
+      h2,h3 {
+        font-weight: 300;
+        font-size: 38px;
+      }
+      h4, h5 {
+        font-family: aktiv-grotesk;
+        font-weight: bold;
+      }
+      h5 {
+        font-size: 20px;
+      }
+    }
+    .intro-text__inner {
+      padding-top: 0;
+      border-bottom: none;
+      iframe {
+        max-width: 100%;
+      }
+    }
+  }
+  &.contact-form-section {
+    .intro-text__inner {
+      border-top: 1px solid #D4E4E9;
+    }
+  }
+}

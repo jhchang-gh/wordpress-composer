@@ -1,0 +1,169 @@
+.column {
+  position: relative;
+
+  &.box {
+    z-index: 3;
+    margin-top: -210px;
+    @include media(md){
+      margin-top: 0px;
+    }
+
+    > .container {
+      padding-right: 0;
+      @include media(md){
+        padding-right: $padding-global;
+      }
+
+    }
+
+    .column__inner {
+      padding: 96px 102px;
+      @media (max-width: 1400px) {
+        padding: 60px 60px;
+      }
+      @include media(md){
+        padding: 0;
+      }
+      &.border {
+        &-bottom {
+          @include media(md) {
+            padding-bottom: 50px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  &__inner {
+    position: relative;
+    background-color: #fff;
+
+    &.border {
+      &-bottom {
+        @include media(md){
+          padding-bottom: 50px;
+        }
+      }
+    }
+
+  }
+
+  &__grid {
+    $width-left: 490px;
+    display: flex;
+    @include media(sm){
+      flex-direction: column;
+    }
+
+    &__left {
+      width: $width-left;
+      @media (max-width: 1400px) {
+        width: #{$width-left - 100px};
+      }
+      @include media(md){
+        width: 100%;
+        margin: 0 0 28px 0;
+      }
+    }
+
+    &__right {
+      width: calc(100% - #{$width-left});
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 126px;
+      max-width: 511px;
+      @media (min-width: 1200px) {
+        max-width: unset;
+      }
+      @media (max-width: 1400px) {
+        padding: 0 0 0 60px;
+        width: calc(100% - #{$width-left - 100px});
+      }
+      @include media(md){
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    img {
+      @include media(md){
+        width: 100%;
+      }
+    }
+
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9FADAC;
+    display: block;
+    margin: 0 0 25px 0;
+
+    @include media(md){
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__title {
+    font-size: 62px;
+    margin: 0 0 15px 0;
+    @include media(md){
+      font-size: 38px;
+      line-height: 48px;
+    }
+    @include media(xxs){
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  &__text,
+  &__text p {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #161616;
+    @include media(md){
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__footer {
+    padding: 50px 0 0 0;
+    @include media(md){
+      padding: 25px 0 0 0;
+    }
+  }
+
+  &__image-right {
+    .column__inner {
+      padding-left: 0!important;
+    }
+    .column__grid {
+      &__left {
+        @include media(md) {
+          padding-right: 30px;
+        }
+      }
+      @include media(sm) {
+        flex-direction: column-reverse;
+        align-items: center;
+        &__right {
+          margin-bottom: 24px;
+        }
+      }
+
+    }
+  }
+
+}
+.page-template-default{
+  .column.box {
+    margin-top: 0;
+  }
+}
