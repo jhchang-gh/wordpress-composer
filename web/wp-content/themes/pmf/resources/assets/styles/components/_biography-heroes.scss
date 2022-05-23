@@ -1,0 +1,15 @@
+.biography-heroes{
+
+    .heroes__header__title{
+        font-family: Bookmania;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 62px;
+        line-height: 72px;
+      @include media(md) {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 8px;
+      }
+    }
+}

@@ -1,0 +1,69 @@
+.cite_block{
+  .container{
+    padding-right: 0;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 48px 206px 48px 48px;
+    background: #EFF7F6;
+    border-radius: 4px 0px 0px 4px;
+    @include media(md) {
+      padding: 32px 44px 32px 60px;
+      .grid-container {
+        padding-left: 0!important;
+        padding-right: 0!important;
+      }
+    }
+    @include media(sm) {
+      padding: 32px 44px;
+    }
+  }
+  &__cite{
+    font-family: Bookmania;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 42px;
+    color: #233746;
+    display:flex;
+    max-width: 950px;
+    @include media(sm) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &::before{
+      content:"“";
+      display: flex;
+      margin-right: 3px;
+    }
+    span {
+      &::after{
+        content:"”";
+        display: inline;
+
+      }
+    }
+  }
+  &__name{
+    padding-left: 16px;
+    margin-top: 16px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #233746;
+  }
+  &__position{
+    padding-left: 16px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9FADAC;
+  }
+
+}

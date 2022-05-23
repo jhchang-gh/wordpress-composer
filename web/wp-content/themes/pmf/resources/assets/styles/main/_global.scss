@@ -1,0 +1,156 @@
+html {
+  height: 100%;
+  min-height: 100%;
+  &.menu-active-header {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $black;
+  background-color: $white;
+  font-family: $font-text;
+  height: 100%;
+  min-height: 100%;
+
+  &.menu-active-header {
+    overflow: hidden;
+  }
+
+}
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  line-height: 1.2;
+  color: #233746;
+  font-weight: normal;
+  font-family: $font-title;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+h1, .h1 {
+  font-size: 48px;
+  &.referral {
+    padding-top: 3px;
+  }
+}
+
+h2, .h2 {
+  font-size: 38px;
+}
+
+h3, .h3 {
+  font-size: 32px;
+}
+
+h4, .h4 {
+  font-size: 28px;
+}
+
+h5, .h5 {
+  font-size: 22px;
+}
+
+h6, .h6 {
+  font-size: 18px;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small, .small {
+  font-size: 0.875em;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+iframe {
+  max-width: 100%;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: calc(#{$container-width} + #{$padding-global * 2});
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding-global;
+  padding-right: $padding-global;
+
+}
+
+.container {
+  padding-left: 220px;
+  padding-right: $padding-global;
+
+
+  @media (min-width: 1800px){
+    padding-left: 462px;
+  }
+
+  @include media(lg){
+    padding-left: $padding-global;
+  }
+
+  @include media(md){
+    padding-left: $padding-global;
+  }
+}
+
+section {
+  margin-bottom: $section-margin-bottom;
+
+  @include media(md) {
+    margin-bottom: $section-margin-bottom-mobile;
+  }
+}
+
+.border {
+  &-bottom {
+    border-bottom: 1px solid #d4e4e9;
+    padding-bottom: 96px;
+
+    @include media(md){
+      padding-bottom: 48px;
+    }
+  }
+}
+:focus:not(.focus-visible) {
+  /*outline: none;*/
+}
+:focus-visible {
+ outline:1px solid #0f62fe;
+}

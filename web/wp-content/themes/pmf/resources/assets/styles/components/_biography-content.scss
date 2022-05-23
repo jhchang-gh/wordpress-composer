@@ -1,0 +1,286 @@
+.biography-content {
+  position: relative;
+  z-index: 2;
+  margin-top: $section-margin-bottom;
+
+  @include media(md){
+    margin-top: $section-margin-bottom + 98px;
+  }
+
+  .container {
+    padding-right: 0;
+  }
+
+  &__inner {
+    background-color: #fff;
+    padding: 96px 0 48px 0;
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid #d4e4e9;
+
+    @include media(md){
+      padding: 40px 0;
+      margin-right:44px;
+    }
+
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      background-color: #fff;
+      left: -102px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__row {
+      $width-right: 380px;
+
+      display: flex;
+      align-items: flex-start;
+
+      @include media(md){
+        flex-direction: column;
+      }
+
+      &__left {
+        width: calc(100% - #{$width-right});
+        padding: 0 48px 0 0;
+
+        @include media(md){
+          width: 100%;
+          padding-right: 0;
+          padding-bottom: 24px;
+        }
+
+        p{
+          font-size: 18px;
+          line-height: 26px;
+          margin-bottom: 12px;
+        }
+        ul {
+          padding-left: 32px;
+          font-size: 18px;
+          line-height: 26px;
+          margin-bottom: 12px;
+          list-style: disc;
+          li {
+            margin-bottom: 12px;
+          }
+        }
+
+        cite{
+          position: relative;
+          font-family: Bookmania;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 32px;
+          line-height: 42px;
+          color: #233746;
+          display: block;
+          width:100%;
+          margin-bottom:50px;
+
+          @include media(md){
+            font-size: 24px;
+            line-height: 32px;
+            padding-left:40px;
+          }
+
+          &::before{
+            content: "";
+            display: block;
+            position:absolute;
+            top: 0;
+            left: -32px;
+            flex-basis: 25px;
+            flex-shrink:0;
+            width: 25px;
+            height: 25px;
+            // margin-right: 16px;
+            background-color: #d4e4e9;
+            background-image: url(../images/quote.svg);
+            //background-image: url('../images/home_intro_background.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include media(md){
+              left:0;
+            }
+
+          }
+
+          span {
+            &::after{
+              content: "";
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              margin-right: 16px;
+              background: transparent url("../images/quote.svg")no-repeat center;
+              transform: rotate(180deg);
+              position: absolute;
+              bottom:0;
+
+
+            }
+          }
+
+        }
+      }
+
+      &__right {
+        width: $width-right;
+        padding-bottom:48px;
+
+        @include media(md){
+          width: 100%;
+
+        }
+
+        .text {
+          max-width: 100%;
+          padding: 25px 0 48px 24px;
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: normal;
+          padding-right: calc(100% - 260px);
+          border-top: 1px solid #d4e4e9;
+          color:#000000;
+          @include media(md){
+            width: 100%;
+            padding-right: 0;
+            padding-left:0;
+            padding-bottom: 24px;
+            margin-right: 0;
+          }
+
+          span {
+            color: #9fadac;
+            display: block;
+            margin: 0 0 16px 0;
+          }
+
+          p {
+            font-weight: normal;
+            color: #000;
+            display: block;
+            margin: 0 0 12px 0;
+            padding: 0;
+          }
+
+          &__link {
+            color: $color-3;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              height: 1px;
+              background-color: $color-3;
+              //transform: translateX(-100%);
+              width: 0;
+              transition: all 0.15s linear;
+            }
+
+            &:hover{
+              color: #9fadac;
+              text-decoration: none!important;
+
+              &::before{
+                width: 24px;
+                margin: 0 4px 0 4px;
+              }
+            }
+
+          }
+
+          .social-share{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &__link{
+              display: flex;
+              justify-content: center;
+              margin-right: 15px;
+              border: 1px solid #9fadac;
+              box-sizing: border-box;
+              border-radius: 50%;
+              width: 48px;
+              height: 48px;
+              background-position: center;
+              background-repeat: no-repeat;
+              transition: all 0.15s linear;
+
+
+
+              &--ico-facebook{
+                background-image: url("../images/icon_fb_black.svg");
+              }
+
+              &--ico-twiter{
+                background-image: url("../images/icon_twiter_black.svg");
+              }
+
+              &--ico-instagram{
+                background-image: url("../images/icon_instagram_black.svg");
+              }
+
+
+              &:hover{
+                background-color: #233746;
+
+                &.social-share__link{
+                  &--ico-facebook{
+                    background-image: url("../images/icon_fb_black-hover.svg");
+                  }
+
+                  &--ico-twiter{
+                    background-image: url("../images/icon_twiter_black-hover.svg");
+                  }
+
+                  &--ico-instagram{
+                    background-image: url("../images/icon_instagram_black-hover.svg");
+                  }
+                }
+              }
+              &:active{
+                background-color: #091925;
+
+                &.social-share__link{
+                  &--ico-facebook{
+                    background-image: url("../images/icon_fb_black-hover.svg");
+                  }
+
+                  &--ico-twiter{
+                    background-image: url("../images/icon_twiter_black-hover.svg");
+                  }
+
+                  &--ico-instagram{
+                    background-image: url("../images/icon_instagram_black-hover.svg");
+                  }
+                }
+              }
+
+            }
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+}

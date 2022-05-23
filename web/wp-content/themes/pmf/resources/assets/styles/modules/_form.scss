@@ -1,0 +1,96 @@
+.form {
+  &-control {
+    background-repeat: no-repeat;
+    background-position: 94% center;
+    border: 1px solid #9fadac;
+    border-radius: 99px;
+    padding: 0 24px;
+    height: 48px;
+    line-height: 48px;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+
+    &::placeholder {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: #525252;
+    }
+
+
+    &:focus-visible {
+      border-color: #0F62FE;
+      outline: none;
+      &::placeholder {
+        color: #A8A8A8;
+      }
+    }
+
+  }
+
+  &-radio {
+    $border-color: #233746;
+
+    [type="radio"] {
+      position:absolute;
+      z-index:-1000;
+      left:-1000px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height:1px;
+      width:1px;
+      margin:-1px;
+      padding:0;
+      border:0;
+
+      &:checked + label {
+        &::after {
+          $size: 6px;
+
+          content: "";
+          display: block;
+          width: $size;
+          height: $size;
+          position: absolute;
+          background-color: $border-color;
+          left: 5px;
+          border-radius: 50%;
+          top: 3px;
+        }
+
+      }
+
+    }
+
+    label {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: $black;
+      position: relative;
+      padding: 0 0 0 25px;
+      cursor: pointer;
+
+      &::before {
+        $size: 16px;
+
+        content: "";
+        display: block;
+        position: absolute;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        border: 1px solid $border-color;
+        left: 0;
+        top: -2px;
+
+      }
+
+    }
+
+
+
+  }
+
+}

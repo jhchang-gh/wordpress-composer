@@ -1,0 +1,89 @@
+.scroll {
+  $size: 48px;
+
+  position: fixed;
+  z-index: 80;
+  right: 24px;
+  bottom: 24px;
+  display: block;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: 1px solid #9fadac;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s linear;
+  will-change: all;
+
+  &:hover {
+    @include media_min(md) {
+      background-color: #233746;
+      border-color: #233746;
+
+      &::after {
+        border-color: #fff;
+      }
+    }
+  }
+
+  &:active {
+    background-color: #091925;
+    border-color: #091925;
+  }
+
+  &::after {
+    $size: 10px;
+
+    content: "";
+    display: block;
+    width: $size;
+    height: $size;
+    border: 1px solid #000;
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+    transition: top 0.15s linear;
+    will-change: top;
+  }
+
+  &__top {
+    &::after {
+      transform: rotate(45deg);
+      top: 3px;
+    }
+    &:active {
+      &::after {
+        border-color: #FFFFFF;
+      }
+    }
+
+    &:hover {
+      &::after {
+        //top: 0;
+      }
+    }
+  }
+  &__filter {
+    &::after {
+      border: 0;
+      background-image: url("../images/filter-button.svg");
+      width: 18px;
+      height: 18px;
+    }
+    &:active {
+      &::after {
+        border-color: #FFFFFF;
+      }
+    }
+
+    &:hover {
+      &::after {
+        //top: 0;
+      }
+    }
+  }
+
+}
+

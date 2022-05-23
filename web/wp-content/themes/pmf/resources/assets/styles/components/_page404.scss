@@ -1,0 +1,42 @@
+.error404 {
+  &__wrapper {
+    /*padding-top: 160px;*/
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    @include media(sm) {
+      padding-top: 80px;
+    }
+    .intro-text__inner{
+      border-bottom: none;
+    }
+
+  }
+  &__big {
+    font-size: 125px;
+    font-weight: 700;
+    font-family: Inter;
+    line-height: 135px;
+    color: #354544;
+    margin-bottom: 48px;
+    @include media(sm) {
+      font-size: 100px;
+      line-height: 110px;
+    }
+  }
+  &__button {
+    width: 100%;
+    padding-top: 64px;
+  }
+  /*.intro-text__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }*/
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

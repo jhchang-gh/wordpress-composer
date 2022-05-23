@@ -1,0 +1,337 @@
+.map {
+  display: block;
+  padding: 15px 0 0 0;
+}
+.map.empty .map__container {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s linear;
+  padding: 30px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+.map__container__inner {
+  position: relative;
+  z-index: 1;
+}
+.map .panel {
+  background-color: #fff;
+  box-shadow: 0 10px 30px 0 rgba(50, 50, 50, 0.2);
+  position: relative;
+  z-index: 3;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.map .panel .btn {
+  margin: 0 12px 0 0;
+}
+
+/** **/
+.map .btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 2.15384615;
+  min-height: 30px;
+  margin: 0;
+  padding: 7px 20px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.map .btn-color {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 25%), 0 1px 0 #a36597;
+  color: #fff;
+  text-shadow: 0 -1px 1px #a36597, 1px 0 1px #a36597, 0 1px 1px #a36597, -1px 0 1px #a36597;
+  background: #a36597;
+  border-color: #a36597;
+}
+
+.map .btn-upload {
+  padding: 30px 100px;
+
+}
+
+.map .btn-opacity {
+  color: #2271b1;
+  border-color: #2271b1;
+  background: #f6f7f7;
+}
+
+.map .btn .dashicons {
+  margin: 0 6px 0 0;
+}
+
+.map .btn-blue {
+  background: #0071a1;
+  border-color: #0071a1;
+  color: #fff;
+}
+
+/** **/
+.map__container__canvas {
+  background: #fff url('../images/bg.png') center center no-repeat;
+}
+
+/** **/
+.map .preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.map .preloader .logo {
+  width: 120px;
+  height: 120px;
+  background: url("../images/map-preloader.svg") center center no-repeat;
+  background-size: contain;
+}
+
+.map .preloader .text {
+  text-align: center;
+}
+
+/** **/
+#map-canvas {
+  /*position:relative;*/
+
+  /*z-index: 1;*/
+}
+
+.map__container__canvas {
+  width: 100%;
+  height: 650px;
+  border: 1px solid #ccd0d4;
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+}
+
+.map__container__controls {
+  width: calc(100% - 700px);
+  padding: 0 0 0 15px;
+}
+/** **/
+.map .form-control {
+  width: 100%;
+  border-color: #0071a1;
+}
+/** **/
+.map__container__controls .row {
+  display: none;
+  max-width: 300px;
+}
+.map__container__controls .row.active {
+  display: block;
+}
+
+.map__container__controls .row-item {
+  margin: 0 0 15px 0;
+}
+.map__container__controls .row label {
+  display: block;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.map .panel__left {
+  display: flex;
+  align-items: center;
+}
+.map .panel__left.column {
+  flex-direction: column;
+}
+.map .panel__left__sizes,
+.map .panel__left__added{
+  display: flex;
+  align-items: center;
+}
+.map .panel__left__inp {
+  display: flex;
+  align-items: center;
+  margin: 0 12px 0 0;
+}
+.map .panel__left__inp [type="number"] {
+  width: 100px;
+  height: 44px;
+  border-color: #a36597;
+}
+.map .panel__left__inp label {
+  margin: 0 10px 0 0;
+  font-weight: 700;
+}
+
+.map .map__popper {
+  background-color: #fff;
+  position: absolute;
+  padding: 20px;
+  z-index: 999;
+  top: 8px;
+  right: 8px;
+  display: none;
+  width: 200px;
+}
+.map .map__popper p {
+  display: block;
+}
+.map .map__popper .close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  top: 0px;
+  right: 0px;
+  z-index: 3;
+  cursor: pointer;
+}
+.map .map__popper.show {
+  display: block;
+}
+.map .map__popper__title {
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #ccd0d4;
+  padding: 0 0 10px 0;
+  line-height: 1.1;
+}
+.map .map__popper__row {
+  margin: 0 0 12px 0;
+}
+.map .map__popper__row:last-child {
+  margin: 0;
+}
+
+.map .map__popper__row label {
+  display: block;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+.map .map__popper__row [type="number"],
+.map .map__popper__row [type="text"] {
+  width: 100%;
+}
+
+.map .map__point-red-marker {
+
+}
+.map .map__point-blue-marker {
+
+}
+.map .panel__left__sizes {
+  display: flex;
+  align-items: center;
+}
+.map .panel__left__sizes a {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #a36597;
+  font-weight: 700;
+  font-size: 13px;
+  color: #000;
+  margin: 0 8px 0 0;
+  text-decoration: none;
+  padding: 0 10px;
+  font-weight: 400;
+}
+.map .panel__left__sizes a:last-child {
+  margin: 0;
+}
+.map .panel__left__sizes span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 15px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 7px 0 0;
+}
+
+
+.map__popper__red,
+.map__popper__info{
+  display: none;
+}
+.map .panel__left__added a {
+  width: 62px;
+  height: 44px;
+  border: 1px solid #a36597;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin: 0 12px 0 0;
+  text-decoration: none;
+}
+.map .panel__left__added a div {
+  display: flex;
+  align-items: center;
+}
+.map .panel__left__added a svg {
+  margin: 0 8px 0 0;
+}
+.panel__left__added__blue svg,
+.panel__left__added__red svg {
+  height: 16px;
+}
+
+.panel__left__added__blue span,
+.panel__left__added__red span {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  margin: 0 8px 0 0;
+  text-align: center;
+}
+.panel__left__added__blue span {
+  background-color: #233746;
+}
+.panel__left__added__red span {
+  background-color: #6D1F2E;
+}
+
+.map__popper.show.red .map__popper__red,
+.map__popper.show.blue .map__popper__red{
+  display: block;
+}
+.map__popper.show.info .map__popper__info {
+  display: block;
+}
+.map__popper__footer {
+  margin: 10px 0 0px 0;
+  border-top: 1px solid #ccd0d4;
+  padding: 10px 0 0px 0;
+}
+.map__popper__footer .button {
+  width: 100%;
+}

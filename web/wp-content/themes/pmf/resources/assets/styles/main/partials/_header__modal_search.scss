@@ -1,0 +1,12 @@
+.header {
+  &__modal_search {
+    position: absolute;
+    z-index: 3;
+    background-color: $color-4;
+    left: 0;
+    right: 0;
+    top: 100%;
+
+  }
+
+}

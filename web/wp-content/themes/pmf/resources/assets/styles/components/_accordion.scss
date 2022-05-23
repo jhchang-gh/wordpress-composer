@@ -1,0 +1,165 @@
+.accordion {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 48px;
+
+  @include media(md){
+    margin-top: 0;
+
+  }
+
+  .container {
+    padding-right: 0;
+    @include media(md){
+      padding-right: $padding-global;
+      padding-left: $padding-global;
+    }
+  }
+
+  &__inner {
+    background-color: #fff;
+    padding: 48px 0 96px 0;
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid #D4E4E9;
+    @include media(md){
+      padding: 0;
+    }
+
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      background-color: #fff;
+      left: -102px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__row {
+      $width-right: 380px;
+
+      display: flex;
+      @include media(md){
+        flex-direction: column;
+      }
+
+      &__left {
+        width: calc(100% - #{$width-right});
+        padding: 0 48px 0 0;
+        @include media(md){
+          width: 100%;
+          padding: 0;
+          margin: 0 0 24px 0;
+        }
+
+
+
+      }
+
+      &__right {
+        width: $width-right;
+        border-top: 1px solid #d4e4e9;
+        padding: 0 120px 0 0;
+        @include media(lg){
+          padding-right: $padding-global;
+        }
+        @include media(md){
+          width: 100%;
+          padding-bottom: $padding-global;
+
+        }
+
+        .text {
+          padding: 25px 0 0 24px;
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: normal;
+          @include media(md){
+            max-width: none;
+          }
+
+          span {
+            color: #9fadac;
+            display: block;
+            margin: 0 0 16px 0;
+          }
+
+          p {
+            font-weight: normal;
+            color: #000;
+            display: block;
+            margin: 0 0 12px 0;
+            padding: 0;
+          }
+
+          a {
+            color: $color-3;
+
+            &:hover{
+              text-decoration: underline;
+            }
+
+          }
+
+        }
+
+      }
+    }
+
+  }
+  &__item {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 10px 15px;
+    font-family: aktiv-grotesk;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    @include media(sm) {
+      &:first-of-type {
+        padding-top: 0;
+      }
+    }
+
+    &__content {
+      display: none;
+      color: #525252;
+      margin-top: 19px;
+      margin-left: 15px;
+      .active &{
+        display: block;
+      }
+    }
+    &__title {
+      color: #161616;
+      width: 100%;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(50% - 3px);
+        right: 0;
+        background-image: url("../images/chevron.svg");
+        background-repeat: no-repeat;
+        background-size: 15px;
+        width: 15px;
+        height: 10px;
+      }
+      .active & {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+  }
+
+}
